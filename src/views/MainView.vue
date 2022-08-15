@@ -10,7 +10,8 @@
     <a class="points-list"></a>
     <a class="groups"> 
         <a class="group-calendar"></a> 
-        <a class='group-chat'></a> </a>
+        <a class='group-chat'></a> 
+    </a>
 
 
   </div>

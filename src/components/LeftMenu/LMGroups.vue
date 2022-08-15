@@ -2,7 +2,7 @@
 <template>
   <div class="menu">
     <div class="title">
-      <AllBeBackIcon :height="28" :width="28" class='all-be-back'/>
+      <Backward :height="28" :width="28" class='all-be-back'/>
       <h1> Группы</h1>
       <CalendarIcon :height="28" :width="28" class='calendar'/>
     </div>
@@ -16,14 +16,14 @@
 </template>
 
 <script>
-import CalendarIcon from '../../assets/CalendarIcon.vue'
-import AllBeBackIcon from '../../assets/AllBeBackIcon.vue'
+import CalendarIcon from '@/assets/CalendarIcon.vue'
+import Backward from '@/assets/Backward.vue'
 
 export default {
   name: 'LeftMenu',
   components:{
     CalendarIcon,
-    AllBeBackIcon
+    Backward
   }
 
 }
@@ -34,24 +34,19 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap');
 
 
-
 .menu {
   position: fixed;
   overflow: hidden;
   left: 0;top: 0;
   width: 320px;
   height: 100vh;
-  /* display: block; */
-  background-color: #ffff; /*#f7f5f5;*//*#1e272e;*/
+  background-color: #ffff;
   border-right: 1px solid #000;
-  /* #1e272e */
 }
-
 .menu-list::-webkit-scrollbar {
     width: 7px;
-    background-color: #ffff;/*#f9f9fd;*/
+    background-color: #ffff;
 }
-
 .menu-list {
   padding-left: 12px;
   height: 100%;
@@ -63,7 +58,6 @@ export default {
   display: flex;
   
 }
-
 .title{
   display: flex;
   align-items: center;
@@ -71,11 +65,10 @@ export default {
   flex-wrap: wrap;
   font-family: "Open sans";
   position: fixed;
-  background: #ffff; /*#f7f3f3;*//*#1e272e;*/
+  background: #ffff;
   width: inherit;
   border-bottom: 4px solid #000;
 }
-
 .title h1{
   font-size: 28px;
   width: 50%;
@@ -87,11 +80,8 @@ export default {
   font-weight:900;
   margin-right: 20px;
 }
-
-
 .menu-list li { 
   color: #000;
-  /* text-decoration: none; */
   list-style: none;
   font-weight: 600;
   font-size: 20px;
@@ -99,13 +89,11 @@ export default {
   border-right: 2px solid #000;
   padding: 5px;
   margin: 8px 0px;
-
 }
 
 @media  (max-width: 700px){
-.menu{
-  width: 100%;
-};
+  .menu{
+    width: 100%;
+  };
 }
-
 </style>

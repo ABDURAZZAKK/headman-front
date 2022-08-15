@@ -1,11 +1,36 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import LeftMenu from '../components/LeftMenu/LMMain.vue'
+import List from '../components/List.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    redirect: "/groups"
+  },
+  {
+    path: '/groups',
+    component: HomeView,
+    children: [
+      {
+      path: '',
+      name: 'menu',
+      component: LeftMenu,
+      children: [
+        {
+        path: '',
+        name: 'groups',
+        component: List
+      },
+      {
+        path: '/group/:id',
+        name: 'group',
+        component: List
+      }
+    ]
+    }
+    ]
   },
   {
     path: '/about',
